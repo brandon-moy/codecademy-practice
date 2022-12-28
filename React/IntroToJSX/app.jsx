@@ -1,6 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
 const h1 = <h1>Hello World</h1>
 
 const myArticle = <article></article>
@@ -25,7 +22,3 @@ const blog = (
     </article>
   </div>
 );
-
-// Copy code here:
-ReactDOM.render(<h1>Hello world</h1>,
-  document.getElementById('app'));
