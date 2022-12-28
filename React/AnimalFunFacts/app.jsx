@@ -36,12 +36,14 @@ function displayFact(e) {
   p.innerHTML = funFact;
 }
 
+const showBackground = true;
+
 const animalFacts = (
   <div>
     <h1>
       {title === '' ? 'Click an animal for a fun fact' : title}
     </h1>
-    {background}
+    { showBackground && background }
     <div className='animals'>
       {images}
     </div>
