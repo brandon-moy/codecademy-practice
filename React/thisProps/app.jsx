@@ -54,3 +54,38 @@ class App extends React.Component {
     );
   }
 }
+
+// Pass Event Handler as a Prop
+
+class Talker extends React.Component {
+  talk() {
+    let speech = '';
+    for (let i = 0; i < 10000; i++) {
+      speech += 'blah ';
+    }
+    alert(speech);
+  }
+
+  render() {
+    return <Button talk={this.talk} />;
+  }
+}
+
+// defaultProps
+
+class Button extends React.Component {
+  render() {
+    return (
+      <button>
+        {this.props.text}
+      </button>
+    );
+  }
+}
+
+Button.defaultProps = { text: 'I am a button' }
+
+ReactDOM.render(
+  <Button text="" />,
+  document.getElementById('app')
+);
