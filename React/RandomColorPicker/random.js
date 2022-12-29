@@ -41,7 +41,7 @@ class Random extends React.Component {
     return (
       <div>
         <h1 className={this.isLight() ? 'white' : 'black'}>
-
+          Your color is {this.state.color}
         </h1>
       </div>
     );
