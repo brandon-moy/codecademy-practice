@@ -38,6 +38,10 @@ class Random extends React.Component {
     return random;
   }
 
+  handleClick() {
+    this.setState({ color: this.chooseColor() });
+  }
+
   render() {
     return (
       <div>
