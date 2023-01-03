@@ -10,10 +10,17 @@ export function AddThoughtForm(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const thought = {
+      id: generateId(),
+      text: text,
+      expiresAt: getNewExpirationTime()
+    }
+    this.props.addThought(thought);
+  }
   }
 
   return (
-    <form className="AddThoughtForm">
+    <form className="AddThoughtForm" onSubmit={handleSubmit} >
       <input
         type="text"
         aria-label="What's on your mind?"
@@ -21,7 +28,7 @@ export function AddThoughtForm(props) {
         value={text}
         onChange={handleChange}
       />
-      <input type="submit" value="Add" onSubmit={handleSubmit} />
+      <input type="submit" value="Add"/>
     </form>
   );
 }
