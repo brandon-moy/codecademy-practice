@@ -18,6 +18,11 @@ function App() {
     },
   ]);
 
+  const addThought = (thought) => {
+    setThoughts((prev) => [thought, ...prev]
+    );
+}
+
   return (
     <div className="App">
       <header>
