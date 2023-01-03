@@ -10,6 +10,7 @@ export function AddThoughtForm(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (text.length === 0) return;
     const thought = {
       id: generateId(),
       text: text,
