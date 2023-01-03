@@ -4,8 +4,12 @@ import { generateId, getNewExpirationTime } from './utilities';
 export function AddThoughtForm(props) {
   const [text, setText] = useState('');
 
-  const handleTextChange = (e) => {
-    setText(e.target.value);
+  const handleTextChange = (event) => {
+    setText(event.target.value);
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
   }
 
   return (
@@ -17,7 +21,7 @@ export function AddThoughtForm(props) {
         value={text}
         onChange={handleChange}
       />
-      <input type="submit" value="Add" />
+      <input type="submit" value="Add" onSubmit={handleSubmit} />
     </form>
   );
 }
