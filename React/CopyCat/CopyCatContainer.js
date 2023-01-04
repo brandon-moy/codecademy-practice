@@ -28,7 +28,7 @@ class CopyCatContainer extends React.Component {
     const toggleTape = this.toggleTape
 
     return (
-      <CopyCat />
+      <CopyCat copying={copying} toggleTape={toggleTape} />
     );
   };
 }

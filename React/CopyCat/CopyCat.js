@@ -22,8 +22,8 @@ export class CopyCat extends React.Component {
   }
 
   render() {
-    const copying = this.state.copying;
-    const toggleTape = this.toggleTape
+    const copying = this.props.copying;
+    const toggleTape = this.props.toggleTape
 
     return (
       <div>
