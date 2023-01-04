@@ -1,4 +1,5 @@
 import React from 'react';
+import { styles } from './styles'
 
 const images = {
   copycat: 'https://content.codecademy.com/courses/React/react_photo_copycat.png',
@@ -7,27 +8,13 @@ const images = {
 
 
 export class CopyCat extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      copying: true
-    };
-
-    this.toggleTape = this.toggleTape.bind(this);
-  }
-
-  toggleTape() {
-    this.setState({ copying: !this.state.copying })
-  }
-
   render() {
     const copying = this.props.copying;
     const toggleTape = this.props.toggleTape
 
     return (
-      <div>
-        <h1>Copy Cat</h1>
+      <div style={styles.divStyles}>
+        <h1 style={styles.imgStyles}>Copy Cat</h1>
         <img
           alt='cat'
           src={copying ? images.copycat : images.quietcat}
