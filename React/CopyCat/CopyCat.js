@@ -15,6 +15,7 @@ export class CopyCat extends React.Component {
     return (
       <div style={styles.divStyles}>
         <h1 style={{ marginBottom: 80 }}>Copy Cat</h1>
+        <input type='text' value={ } onChange={ } />
         <img
           alt='cat'
           src={copying ? images.copycat : images.quietcat}
